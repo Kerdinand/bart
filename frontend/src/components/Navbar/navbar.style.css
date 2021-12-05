@@ -1,0 +1,79 @@
+/* Navbar CSS, wich has its breakpoints currently at 800 - 1 pixels*/
+
+/* Structure of the navbar.stlye.css file:
+0. Potential variable declarations
+1. General styles applicable for desktop and mobile device screens.
+2. General styles applicable ONLY for mobile device screens.
+3. General styles applicable ONLY for desktop device screen. */
+
+/* Variable decleration */
+
+/* 1. General */
+div nav {
+	display: flex;
+	height: 3rem;
+	width: 100vw;
+	align-items: center;
+	justify-content: space-around;
+	gap: 0.7rem;
+	font-size: 2rem;
+}
+
+div nav * div p {
+	padding: 3px 5px;
+}
+
+div nav .profile div,
+div nav .settings div,
+div nav .favorites div,
+div nav .next-dep div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div p:hover {
+	background-color: lightsalmon;
+	border-radius: 5px;
+	border-width: 0;
+}
+/* 2. Mobile devices */
+@media only screen and (max-width: 799px) {
+	div nav .profile div p,
+	div nav .settings div p,
+	div nav .favorites div p {
+		display: none;
+	}
+
+	div nav .next-dep div {
+		font-size: 1rem;
+		gap: 0.5rem;
+	}
+
+	div ion-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	div ion-icon:hover {
+		display: inline-block;
+		cursor: pointer;
+		transform: rotate(360deg);
+		transition-duration: 500ms;
+	}
+}
+
+/* 3. Desktop devices */
+@media only screen and (min-width: 800px) {
+	div nav .profile div ion-icon,
+	div nav .settings div ion-icon,
+	div nav .favorites div ion-icon {
+		display: none;
+	}
+
+	div nav .next-dep div {
+		font-size: 1rem;
+		justify-self: flex-end;
+		gap: 1.5rem;
+	}
+}

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Kerdinand/bart#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
   }
 }
