@@ -1,0 +1,375 @@
+body {
+	margin: 0 0 0 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+#results {
+	display: none;
+	gap: 15px;
+}
+.grid {
+	display: block;
+}
+.selection {
+	display: flex;
+	grid-row: auto auto auto auto;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	gap: 1rem;
+}
+
+.selection div {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	font-size: 20px;
+	justify-content: space-between;
+}
+
+.selection p {
+	margin: 0;
+}
+
+.selection select {
+	width: 90%;
+	font-size: 20px;
+}
+
+.basic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px 0px 10px 0px;
+}
+
+#switch {
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#switch .icon {
+	margin: 0;
+	padding: 0;
+}
+
+#switch .icon:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+	margin: 0;
+	padding: 0;
+}
+
+#search {
+	font-size: 20px;
+	width: 50vw;
+	border-radius: 10px;
+	border-style: outset;
+}
+
+.card {
+	width: 96vw;
+	margin: 15px auto 15px auto;
+	background-color: rgb(241, 241, 241);
+	border-radius: 7px;
+	box-shadow: 2px 2px #b0b2b4;
+}
+
+.card:hover {
+	border: 1px solid orange;
+	border-style: outset;
+}
+
+.upper-card {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0px 0px 0px 10px;
+	margin: 4px auto 4px auto;
+}
+
+.upper-card .route span {
+	padding: 0 5px 0 5px;
+	border-radius: 50%;
+}
+
+.times {
+	display: block;
+	width: 4.9rem;
+}
+
+.details-view {
+	padding-right: 15px;
+}
+
+.route {
+	display: inline-flex;
+	gap: 5px;
+}
+
+.lower-card {
+	display: none;
+	padding-top: 5px;
+	padding-left: 10px;
+	border-top: black solid 1px;
+	grid-template-columns: 25% 25% auto;
+	justify-content: stretch;
+	grid-row: auto;
+	width: auto;
+}
+
+.card .lower-card .dep-time {
+	grid-column: span 2;
+}
+.card .lower-card .origin {
+	grid-column: span 1;
+}
+
+.card .lower-card .head-dest {
+	grid-column: span 2;
+}
+
+.card .lower-card .arr-time {
+	grid-column: span 2;
+}
+
+.card .lower-card .switch {
+	margin: 1rem 0 1rem 0;
+}
+
+.card .lower-card .switch-time {
+	grid-column: span 2;
+	margin: 1rem 0 1rem 0;
+}
+
+.details-view {
+	cursor: pointer;
+}
+
+.intermediate-station {
+	grid-column: span 3;
+}
+
+nav {
+	display: flex;
+	height: 3rem;
+	width: 100vw;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.7rem;
+	font-size: 2rem;
+}
+
+nav .profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .profile .icon:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+nav .settings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .settings .icon:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+nav .favorites {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .favorites .icon:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+nav .next-dep {
+	font-size: 1rem;
+}
+
+.login {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+	background-color: rgba(179, 179, 179, 0.781);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.login form * {
+	display: block;
+	z-index: 30;
+}
+
+.login form label,
+.login form input[type='password'],
+.login form input[type='text'] {
+	margin: 5px auto 5px auto;
+	width: 70vw;
+}
+.favorites-view .favorite {
+	margin: 5px auto 5px auto;
+	width: 70vw;
+}
+
+.favorites-view * {
+	display: block;
+	z-index: 30;
+}
+
+.login form input[type='submit'] {
+	margin: 15px auto 0px auto;
+	font-size: 1.3rem;
+	border-radius: 4%;
+}
+
+.login .form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	font-size: 1.5rem;
+}
+
+.close {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	top: 0px;
+	right: 0px;
+	font-size: 3rem;
+	color: red;
+	z-index: 30;
+}
+
+.close-icon:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+.settings-view {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+	background-color: rgba(179, 179, 179, 0.781);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.settings-view .delete {
+	font-size: 15px;
+	border-radius: 10%;
+	background-color: rgb(255, 56, 56);
+}
+
+.favorites-view {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+	background-color: rgba(179, 179, 179, 0.781);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.date-view {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+	background-color: rgba(179, 179, 179, 0.781);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.later-dep:hover,
+.earlier-dep:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+.calendar ion-icon,
+.later-dep ion-icon,
+.earlier-dep ion-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cookies {
+	width: auto;
+	bottom: 0;
+	position: fixed;
+	padding: 0 1rem 1rem 1rem;
+	font-size: 13px;
+	background-color: lightgray;
+}
+
+.cookies div {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.cookies div button {
+	font-size: 15px;
+	border-radius: 10%;
+}
+
+.cookies div .accept {
+	background-color: lightgreen;
+}
+
+.cookies div .decline {
+	background-color: rgb(255, 56, 56);
+}
+
+.route p {
+	margin: 0;
+	border-radius: 10%;
+	padding: 1px 2px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<div class="profile">
+				<ion-icon name="person-circle-outline" class="icon"></ion-icon>
+			</div>
+			<div class="settings">
+				<ion-icon name="settings-outline" class="icon"></ion-icon>
+			</div>
+			<div class="favorites">
+				<ion-icon name="heart-outline" class="icon"></ion-icon>
+			</div>
+			<div class="next-dep">SFIA: <span class="time">10 Min</span> .</div>
+			<div class="next-dep">12TH: <span class="time">10 Min</span>.</div>
+			<div class="next-dep">19TH: <span class="time">10 Min</span>.</div>
+		</nav>
+		<div class="login animate__animated animate__fadeInTopLeft">
+			<div class="close">
+				<ion-icon name="close-outline" class="close-icon"></ion-icon>
+			</div>
+			<div class="form">
+				<h3>Not logged in yet?</h3>
+				<form>
+					<label for="userName">Username:</label>
+					<input type="text" name="userName" id="userName" />
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" />
+					<input type="submit" value="Login" />
+				</form>
+				<p>sign up here!</p>
+			</div>
+		</div>
+		<div class="settings-view animate__animated animate__fadeInTopLeft">
+			<div class="close">
+				<ion-icon name="close-outline" class="close-icon"></ion-icon>
+			</div>
+			<div>
+				<h3>Settings</h3>
+				<p>Do you want to delete cookies?</p>
+				<button class="delete">Delete</button>
+				<p class="note">
+					Note that some feautures may not work as intended without
+					cookies.
+				</p>
+			</div>
+		</div>
+		<div class="favorites-view animate__animated animate__fadeInDown">
+			<div class="close">
+				<ion-icon name="close-outline" class="close-icon"></ion-icon>
+			</div>
+			<div class="choice">
+				<h3>Favorites</h3>
+				<select name="favorite" id="favorite1" class="favorite">
+					<option>Choose a Origin</option>
+				</select>
+				<select name="favorite" id="favorite2" class="favorite">
+					<option>Choose a Origin</option>
+				</select>
+				<select name="favorite" id="favorite3" class="favorite">
+					<option>Choose a Origin</option>
+				</select>
+				<button type="submit" id="test">Save</button>
+			</div>
+		</div>
+		<div class="date-view animate__animated animate__fadeInDown">
+			<div class="close">
+				<ion-icon name="close-outline" class="close-icon"></ion-icon>
+			</div>
+			<div class="calendar">
+				<p>
+					Set the date of departure (Note that the date hast to be
+					within the next 7 days):
+				</p>
+				<form>
+					<label for="dep-date">departure date:</label>
+					<input type="date" name="dep-date" id="dep-date" />
+					<label for="set-dep-time"></label>
+					<input type="time" name="set-dep-time" id="set-dep-time" />
+				</form>
+			</div>
+		</div>
+		<div class="selection">
+			<select name="origin" id="origin">
+				<option>Choose a Origin</option>
+			</select>
+			<p id="switch">
+				<ion-icon
+					name="swap-horizontal-outline"
+					class="icon"
+				></ion-icon>
+			</p>
+			<select name="destination" id="destination">
+				<option>Choose a Destination</option>
+			</select>
+			<div>
+				<div class="calendar" id="open-cal">
+					<ion-icon name="calendar-outline"></ion-icon>
+				</div>
+				<button type="submit" id="search">Search</button>
+				<div class="later-dep">
+					<ion-icon name="chevron-down-outline"></ion-icon>
+				</div>
+				<div class="earlier-dep">
+					<ion-icon name="chevron-up-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<p id="loading" style="display: none">Loading...</p>
+		<h3>Proposed Routes:</h3>
+		<div id="results"></div>
+		<div class="cookies">
+			<p>
+				Do you accept cookies?, They are necessary to ensure complete
+				functionality of the site. If not accepted some feautes may not
+				work. If you wish to update your choice, check the settings tab.
+			</p>
+			<div>
+				<button class="accept">Accept</button>
+				<button class="decline">Decline</button>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>
