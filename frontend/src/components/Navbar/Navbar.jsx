@@ -4,11 +4,9 @@ import NavbarFavorites from "./NavbarFavorites";
 import NavbarNextDep from "./NavbarNextDep";
 import "./navbar.style.css"
 
-
-
 const Navbar = () => {
     return ( 
-        <div>
+        <div className="navbar">
             <nav>
                 <div className="profile"><NavbarProfile></NavbarProfile></div>
                 <div className="settings"><NavbarSettings></NavbarSettings></div>

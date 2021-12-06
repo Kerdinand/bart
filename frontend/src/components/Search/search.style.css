@@ -1,0 +1,87 @@
+/* Search CSS, wich has its breakpoints currently at 800 - 1 pixels*/
+
+/* Structure of the search.stlye.css file:
+0. Potential variable declarations
+1. General styles applicable for desktop and mobile device screens.
+2. General styles applicable ONLY for mobile device screens.
+3. General styles applicable ONLY for desktop device screen. */
+
+/* 0. Variable decleration */
+
+/* 1. General */
+.search-selection {
+	width: 100vw;
+	margin: 10px 0px 0px 0px;
+}
+
+.search-selection .selection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1.5rem;
+}
+
+.search-selection ion-icon:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+.search-selection select {
+	width: 40vw;
+}
+
+.selection {
+	display: flex;
+	grid-row: auto auto auto auto;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	gap: 1rem;
+}
+
+.selection div {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	font-size: 20px;
+	justify-content: space-between;
+}
+
+.selection p {
+	margin: 0;
+}
+
+.selection select {
+	width: 90%;
+	font-size: 20px;
+}
+
+#search {
+	font-size: 20px;
+	width: 50vw;
+	border-radius: 10px;
+	border-style: outset;
+}
+
+.later-dep:hover,
+.earlier-dep:hover {
+	display: inline-block;
+	cursor: pointer;
+	transform: rotate(360deg);
+	transition-duration: 500ms;
+}
+
+.calendar ion-icon,
+.later-dep ion-icon,
+.earlier-dep ion-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 2. Mobile devices */
+
+/* 3. Desktop devices */
