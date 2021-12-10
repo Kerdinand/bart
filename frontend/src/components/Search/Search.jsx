@@ -1,5 +1,6 @@
 import SearchSelection from './SearchSelection';
 
+
 import './search.style.css'
 
 const Search = () => {
@@ -8,7 +9,6 @@ const Search = () => {
             <div className="search">
                 <SearchSelection></SearchSelection>
             </div>
-            <h3>Proposed Routes:</h3>
         </div>
         
  );
