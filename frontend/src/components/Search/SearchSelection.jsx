@@ -84,13 +84,13 @@ const SearchSelection = () => {
 						</div>
 					</div>
 				</div>
-				<div className="results">
+				<div className="result-part">
 					<SearchResults routeData={routeData} loaded={resultsReceived}></SearchResults>
 				</div>
 			</div>
 			
 		 );
-	}
+}
 	
     
 }
