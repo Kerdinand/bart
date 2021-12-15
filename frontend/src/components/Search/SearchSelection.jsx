@@ -8,6 +8,7 @@ const SearchSelection = () => {
 	const [destinationChoice, setDestinationChoice] = useState(stations)
 	const [resultsReceived, setResultsReceived] = useState(false);
 	const [routeData, setRouteData] = useState(false)
+	const [stationData, setStationData] = useState('')
 
 	useEffect(() => {
 		const getStationData = async () => {
@@ -22,6 +23,7 @@ const SearchSelection = () => {
 			}
 			const response = await fetch('http://localhost:4000/api/v1/search/getStationData', fetchOptions)
 			const object = await response.json();
+			setStationData(object);
 			const stations= []
 			object.root.stations.station.forEach((station) => stations.push(station))
 			setStations(stations)
@@ -49,6 +51,11 @@ const SearchSelection = () => {
 		setResultsReceived(true)
 	}
 
+	const switchChoice = () => {
+		const memory = originChoice
+		console.log(memory)
+	}
+
 	if (!isLoaded) {
 		return (<div>Loading...</div>)
 	} else {
@@ -60,7 +67,7 @@ const SearchSelection = () => {
 						<option key={station.abbr} value={[station.abbr, station.name]}>{station.name}</option>
 					))}
 					</select>
-					<p id="switch">
+					<p id="switch" onClick={switchChoice}>
 						<ion-icon
 							name="swap-horizontal-outline"
 							class="icon"
@@ -85,7 +92,7 @@ const SearchSelection = () => {
 					</div>
 				</div>
 				<div className="result-part">
-					<SearchResults routeData={routeData} loaded={resultsReceived}></SearchResults>
+					<SearchResults routeData={routeData} loaded={resultsReceived} stationData={stations}></SearchResults>
 				</div>
 			</div>
 			

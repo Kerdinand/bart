@@ -21,9 +21,11 @@ app.post('/api/v1/search/getStationData', async (request, response) => {
 });
 
 app.post('/api/v1/search/getRouteData', async (request, response) => {
+	console.log('Receive Request');
 	const fetch_object = await fetch(
 		`https://api.bart.gov/api/sched.aspx?cmd=depart&orig=${request.body.origin}&dest=${request.body.destination}&date=now&key=${API_KEY}&b=2&a=2&l=1&json=y`
 	);
 	const json = await fetch_object.json();
+	console.log('Got Route Data');
 	response.json(json);
 });

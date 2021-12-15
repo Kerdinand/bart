@@ -83,5 +83,102 @@
 }
 
 /* 2. Mobile devices */
+.card {
+	width: 96vw;
+	margin: 15px auto 15px auto;
+	background-color: rgb(241, 241, 241);
+	border-radius: 7px;
+	box-shadow: 2px 2px #b0b2b4;
+}
 
+.card:hover {
+	border: 1px solid orange;
+	border-style: outset;
+}
+
+.upper-card {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0px 0px 0px 10px;
+	margin: 4px auto 4px auto;
+}
+
+.upper-card .route span {
+	padding: 0 5px 0 5px;
+	border-radius: 50%;
+}
+
+.times {
+	display: block;
+	width: 4.9em;
+}
+
+.details-view {
+	padding-right: 15px;
+}
+
+.route {
+	display: inline-flex;
+	gap: 5px;
+}
+
+.lower-card {
+	padding-top: 5px;
+	padding-left: 10px;
+	border-top: black solid 1px;
+
+	width: auto;
+}
+
+.leg-grid,
+.transit-grid {
+	display: grid;
+	grid-template-columns: 25% 25% auto;
+	justify-content: stretch;
+	grid-row: auto;
+	width: auto;
+	gap: 5px;
+}
+
+.transit-grid {
+	margin: 1em 0;
+}
+
+.lower-card-hidden {
+	display: grid;
+}
+
+.card .lower-card .dep-time {
+	grid-column: span 2;
+}
+.card .lower-card .origin {
+	grid-column: span 1;
+}
+
+.card .lower-card .head-dest {
+	grid-column: span 2;
+}
+
+.card .lower-card .arr-time {
+	grid-column: span 2;
+}
+
+.card .lower-card .switch {
+	margin: 1rem 0 1rem 0;
+}
+
+.card .lower-card .switch-time {
+	grid-column: span 2;
+	margin: 1rem 0 1rem 0;
+}
+
+.details-view {
+	cursor: pointer;
+}
+
+.intermediate-station {
+	grid-column: span 3;
+}
 /* 3. Desktop devices */
