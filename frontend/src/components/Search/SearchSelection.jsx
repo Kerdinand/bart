@@ -8,7 +8,6 @@ const SearchSelection = () => {
 	const [destinationChoice, setDestinationChoice] = useState(stations)
 	const [resultsReceived, setResultsReceived] = useState(false);
 	const [routeData, setRouteData] = useState(false)
-	const [stationData, setStationData] = useState('')
 
 	useEffect(() => {
 		const getStationData = async () => {
@@ -23,13 +22,25 @@ const SearchSelection = () => {
 			}
 			const response = await fetch('http://localhost:4000/api/v1/search/getStationData', fetchOptions)
 			const object = await response.json();
-			setStationData(object);
 			const stations= []
 			object.root.stations.station.forEach((station) => stations.push(station))
 			setStations(stations)
 			setIsLoaded(true);
 		}
 		getStationData()
+
+		const getLineData = async () => {
+			const fetchOptions = {
+				method: 'POST',
+				body: JSON.stringify({
+					title: 'Supply all lines',
+				}),
+				headers: {
+					'Content-type': 'application/json; charset=UTF-8',
+				},
+			}
+			const response = await fetch('http://localhost:4000/api/v1/search/getLineData', fetchOptions)
+		}
 	}, [])
 
 	const getRouteData = async () => {

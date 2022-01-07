@@ -1,12 +1,7 @@
-/* Search CSS, wich has its breakpoints currently at 800 - 1 pixels*/
-
 /* Structure of the search.stlye.css file:
-0. Potential variable declarations
 1. General styles applicable for desktop and mobile device screens.
 2. General styles applicable ONLY for mobile device screens.
 3. General styles applicable ONLY for desktop device screen. */
-
-/* 0. Variable decleration */
 
 /* 1. General */
 .search-selection {
@@ -97,11 +92,11 @@
 }
 
 .upper-card {
-	display: inline-flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 6rem 50% 15% 10% auto;
 	align-items: center;
 	width: 100%;
-	padding: 0px 0px 0px 10px;
+	padding: 4px 4px 4px 10px;
 	margin: 4px auto 4px auto;
 }
 
@@ -112,7 +107,7 @@
 
 .times {
 	display: block;
-	width: 4.9em;
+	width: auto;
 }
 
 .details-view {
@@ -181,4 +176,3 @@
 .intermediate-station {
 	grid-column: span 3;
 }
-/* 3. Desktop devices */

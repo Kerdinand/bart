@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SearchLegInfo from "./SearchLegInfo";
 import SearchTransitInfo from "./SearchTransitInfo";
 
